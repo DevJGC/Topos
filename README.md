@@ -7,6 +7,6 @@
  
  Free Animals Assets: https://assetstore.unity.com/packages/3d/characters/animals/lovely-animals-pack-92629
  
- Sounds FreeSound: https://freesound.org/
+ Free Sounds FreeSound: https://freesound.org/
  
  
