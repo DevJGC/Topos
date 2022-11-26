@@ -5,6 +5,8 @@ using UnityEngine;
 public class SpawnerTopos : MonoBehaviour
 {
     public Vector3[] positionHoles;
+
+
     public GameObject mole;
 
 
@@ -19,4 +21,5 @@ public class SpawnerTopos : MonoBehaviour
     {
         
     }
+
 }
