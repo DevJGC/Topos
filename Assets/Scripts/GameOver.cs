@@ -20,7 +20,7 @@ public class GameOver : MonoBehaviour
     {
         record = PlayerPrefs.GetInt("record");
         score = PlayerPrefs.GetInt("score");
-        PlayerPrefs.SetInt("score", score);
+
         recordText.text = record.ToString();
         scoreText.text = score.ToString();
 
@@ -33,7 +33,7 @@ public class GameOver : MonoBehaviour
             gameOverText.text = "GAME OVER";
         }
 
-        Debug.Log("Score: " + score);
+        //Debug.Log("Score: " + score);
     }
 
     

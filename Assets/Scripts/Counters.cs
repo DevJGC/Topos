@@ -29,6 +29,7 @@ public class Counters : MonoBehaviour
     void Start()
     {
 
+        mole.SetActive(true);
         record = PlayerPrefs.GetInt("record", 0);
         score = PlayerPrefs.GetInt("score", 0);
         recordTextNumber.text = record.ToString();
