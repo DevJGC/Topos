@@ -30,8 +30,10 @@ public class Counters : MonoBehaviour
     {
 
         record = PlayerPrefs.GetInt("record", 0);
+        score = PlayerPrefs.GetInt("score", 0);
         recordTextNumber.text = record.ToString();
         scoreTextNumber.text = score.ToString();
+        PlayerPrefs.SetInt("score", 0);
     }
 
     void Update()
@@ -39,7 +41,7 @@ public class Counters : MonoBehaviour
 
         timeLeftPartial -= Time.deltaTime;
 
-        if (timeLeftPartial < 0)
+        if (timeLeftPartial < 0 && contador >0)
         {
             timeLeftPartial = 1f;
             contador -= 1;
@@ -62,6 +64,7 @@ public class Counters : MonoBehaviour
             panelGameOver.SetActive(true);
             panelGame.SetActive(false);
             mole.SetActive(false);
+            PlayerPrefs.SetInt("score", score);
         }
     }
 
