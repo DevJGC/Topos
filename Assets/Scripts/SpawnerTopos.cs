@@ -12,8 +12,12 @@ public class SpawnerTopos : MonoBehaviour
 
     void Start()
     {
-        Instantiate(mole, positionHoles[0], Quaternion.identity);
-        Instantiate(mole, positionHoles[1], Quaternion.identity);
+       for (int i=0; i<positionHoles.Length; i++)
+       {
+            Instantiate(mole, positionHoles[i], Quaternion.identity);
+       }
+        
+  
     }
 
     
