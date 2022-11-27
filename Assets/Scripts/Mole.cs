@@ -46,7 +46,7 @@ public class Mole : MonoBehaviour
             rb.isKinematic = false;
             rb.AddForce(Vector3.up * 2000);
             rb.AddTorque(Vector3.up * 5000);
-            Destroy(gameObject, 2f);
+            Destroy(gameObject, 1f);
             sCollider.enabled = false;            
         }
         

@@ -20,6 +20,9 @@ public class Counters : MonoBehaviour
     public int score = 0;
     public int record = 0;
 
+    public GameObject panelGameOver;
+    public GameObject panelGame;
+
 
 
 
@@ -49,19 +52,19 @@ public class Counters : MonoBehaviour
                 recordTextNumber.text = record.ToString();
             }
             
-             // revisar esto siguiente, cuando se acaba el tiempo
-            if (contador == 0)
-            {
-                contador = 60;
-            }
+
+
         }
 
 
-        if (contador < 0)
+        if (contador == 0)
         {
-            Debug.Log("Time's up!");
+            panelGameOver.SetActive(true);
+            panelGame.SetActive(false);
+            mole.SetActive(false);
         }
     }
 
     
 }
+

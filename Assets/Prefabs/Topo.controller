@@ -30,7 +30,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Look
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 4736936524263198423}
@@ -57,7 +57,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Jump
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 6797498293866026086}
@@ -84,7 +84,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Exit
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -160,7 +160,7 @@ AnimatorStateMachine:
     m_Position: {x: 220, y: 320, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3051151403044474712}
-    m_Position: {x: 220, y: 440, z: 0}
+    m_Position: {x: 220, y: 420, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -919355169096289990}
     m_Position: {x: 220, y: 550, z: 0}
