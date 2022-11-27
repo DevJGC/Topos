@@ -294,6 +294,7 @@ MonoBehaviour:
   audioSource: {fileID: 1207062110}
   hitSound: {fileID: 8300000, guid: c6077a70e4b83f7489ee4c4cabc3bcc2, type: 3}
   mazeSound: {fileID: 8300000, guid: c4b8642da1cd0ee43ac96ee06db32aac, type: 3}
+  scriptContador: {fileID: 0}
 --- !u!135 &339434104769885307
 SphereCollider:
   m_ObjectHideFlags: 0

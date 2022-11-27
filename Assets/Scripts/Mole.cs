@@ -14,10 +14,16 @@ public class Mole : MonoBehaviour
 
     [SerializeField] AudioClip hitSound;
     [SerializeField] AudioClip mazeSound;
+
+    [SerializeField] Counters scriptContador;
+
+
+
+
     
     void Start()
     {
-      
+        scriptContador = GameObject.FindObjectOfType<Counters>();
     }
 
     
@@ -31,6 +37,7 @@ public class Mole : MonoBehaviour
     {
         if (isClicked == false)
         {
+            scriptContador.score = scriptContador.score + 1;
             audioSource.PlayOneShot(mazeSound);
             audioSource.PlayOneShot(hitSound);
             particleHit.Play();
