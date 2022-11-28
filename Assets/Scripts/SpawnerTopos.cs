@@ -5,26 +5,21 @@ using UnityEngine;
 public class SpawnerTopos : MonoBehaviour
 {
     public Vector3[] positionHoles;
-
-
     public GameObject mole;
-
     public float timeToSpawn = 2f;
     public float timeToSpawnMax = 2f;
     public int countSpawn=0;
 
+    [SerializeField] int tempHole;
 
     void Start()
     {
   
     }
 
-    
     void Update()
     {
-
         timeToSpawn -= Time.deltaTime;
-
         if (timeToSpawn <= 0)
         {
             SpawnMole();
@@ -56,14 +51,26 @@ public class SpawnerTopos : MonoBehaviour
         {
             timeToSpawnMax = 0.50f;
         }
-
-        
+   
     }
 
     public void SpawnMole()
     {
-        int random = Random.Range(0, positionHoles.Length);
-        Instantiate(mole, positionHoles[random], Quaternion.identity);
+        
+        int randomHole = Random.Range(0, positionHoles.Length);
+        if (randomHole == tempHole)
+        {
+            if (randomHole == positionHoles.Length - 1)
+            {
+                randomHole--;
+            }
+            else
+            {
+                randomHole++;
+            }
+        }
+        Instantiate(mole, positionHoles[randomHole], Quaternion.identity);
+        tempHole = randomHole;
+        Debug.Log(tempHole);
     }
-
 }

@@ -1,23 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-
 public class FailClick : MonoBehaviour
 {
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip failSound;
     [SerializeField] GameObject pointClick;
     [SerializeField] ParticleSystem failParticles;
-
     Vector3 worldPosition;
-
 
     void Start()
     {
 
     }
-
  
     void Update()
     {
@@ -27,7 +22,6 @@ public class FailClick : MonoBehaviour
             {
                 worldPosition = hitData.point;
             }
-    
     }
 
     public void OnMouseDown()
@@ -35,6 +29,5 @@ public class FailClick : MonoBehaviour
         audioSource.PlayOneShot(failSound);
         pointClick.transform.position = worldPosition;
         failParticles.Play();
-       // Debug.Log(worldPosition);
     }
 }

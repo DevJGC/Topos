@@ -6,21 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class Replay : MonoBehaviour
 {
-
     public GameObject panelGameOver;
-
     public void ReplayGame()
     {
-       //panelGameOver.SetActive(false);
-        SceneManager.LoadScene("Game");
-        
+        SceneManager.LoadScene("Game");     
     }
     void Start()
     {
         
     }
 
-   
     void Update()
     {
         

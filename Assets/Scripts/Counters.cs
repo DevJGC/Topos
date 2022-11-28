@@ -1,34 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.UI;
-//using UnityEngine.SceneManagement;
 using System;
 using TMPro;
-
 
 public class Counters : MonoBehaviour
 {
     public float timeLeftPartial = 1f;
     public float contador = 60.0f;
-    public GameObject mole;
-    
+    public GameObject mole; 
     public TextMeshProUGUI text;
     public TextMeshProUGUI scoreTextNumber;
     public TextMeshProUGUI recordTextNumber;
-
     public int score = 0;
     public int record = 0;
-
     public GameObject panelGameOver;
     public GameObject panelGame;
 
-
-
-
     void Start()
     {
-
         mole.SetActive(true);
         record = PlayerPrefs.GetInt("record", 0);
         score = PlayerPrefs.GetInt("score", 0);
@@ -39,9 +29,7 @@ public class Counters : MonoBehaviour
 
     void Update()
     {
-
         timeLeftPartial -= Time.deltaTime;
-
         if (timeLeftPartial < 0 && contador >0)
         {
             timeLeftPartial = 1f;
@@ -54,11 +42,7 @@ public class Counters : MonoBehaviour
                 PlayerPrefs.SetInt("record", record);
                 recordTextNumber.text = record.ToString();
             }
-            
-
-
         }
-
 
         if (contador == 0)
         {
@@ -68,7 +52,5 @@ public class Counters : MonoBehaviour
             PlayerPrefs.SetInt("score", score);
         }
     }
-
-    
 }
 
