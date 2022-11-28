@@ -5,14 +5,22 @@ using UnityEngine.UI;
 using TMPro;
 public class GameOver : MonoBehaviour
 {
+    // Referencia panel GameOver
     public GameObject panelGameOver;
+    // Referencia panel GamePlay
     public GameObject panelGame;
+    // Referencia puntos, record y texto final partida
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI recordText;
     public TextMeshProUGUI gameOverText;
+    // Variable para guardar el record y puntos
     public int score;
     public int record;
 
+
+    // Carga los puntos y el record
+    // Los pasa a String para el Canvas
+    // Si los puntos es mayor que el último record, se igualan y lo muestra en pantalla
     void Start()
     {
         record = PlayerPrefs.GetInt("record");
@@ -29,6 +37,7 @@ public class GameOver : MonoBehaviour
         }
     }
     
+    // No utilizado por ahora
     void Update()
     {
         

@@ -4,19 +4,29 @@ using UnityEngine;
 
 public class SpawnerTopos : MonoBehaviour
 {
+    // Todas las posiciones posibles desde dónde saldrá el Topo
     public Vector3[] positionHoles;
+    // Referencia al prefab del Topo
     public GameObject mole;
+    // Tiempo para reaparecer
     public float timeToSpawn = 2f;
+    // Tiempo máximo para reaparecer
     public float timeToSpawnMax = 2f;
+    // Contador de reapariciones
     public int countSpawn=0;
 
+    // Variable temporal para saber si se repite posición
     [SerializeField] int tempHole;
 
+    // No utilizado por ahora
     void Start()
     {
   
     }
 
+    // Resta un segundo en tiempo de ejecución
+    // Si el tiempo parcial llega a 0, lanza el Spawner de Topos y suma una reaparición
+    // Y conforme van apareciendo más, van acelerándose más el tiempo de reaparición, para que cada vez sea más rápido
     void Update()
     {
         timeToSpawn -= Time.deltaTime;
@@ -54,6 +64,8 @@ public class SpawnerTopos : MonoBehaviour
    
     }
 
+    // Lanza el topo en una posición aleatoria de entro los datos que tiene del Array
+    // Y si aparece en el mismo lugar lo mueve hacia delante o hacia detrás en su posición de reaparición
     public void SpawnMole()
     {
         
@@ -71,6 +83,6 @@ public class SpawnerTopos : MonoBehaviour
         }
         Instantiate(mole, positionHoles[randomHole], Quaternion.identity);
         tempHole = randomHole;
-        Debug.Log(tempHole);
+        //Debug.Log(tempHole);
     }
 }

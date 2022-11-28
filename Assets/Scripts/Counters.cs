@@ -6,17 +6,33 @@ using TMPro;
 
 public class Counters : MonoBehaviour
 {
+    // Contador de tiempo parcial
     public float timeLeftPartial = 1f;
+    // Contador de tiempo total
     public float contador = 60.0f;
+    // Prefab Topo
     public GameObject mole; 
+    // Texto de tiempo
     public TextMeshProUGUI text;
+    // Texto de puntaje
     public TextMeshProUGUI scoreTextNumber;
+    // Texto de record
     public TextMeshProUGUI recordTextNumber;
+    // Puntos
     public int score = 0;
+    // Record
     public int record = 0;
+    // Panel GameOver
     public GameObject panelGameOver;
+    // Panel Game
     public GameObject panelGame;
 
+    // Activa Topo
+    // Carga record del PlayerPrefs
+    // Carga puntaje del PlayerPrefs
+    // Pasa el Record al Canvas
+    // Pasa el Puntaje al Canvas
+    // Pone el Score a 0
     void Start()
     {
         mole.SetActive(true);
@@ -27,6 +43,11 @@ public class Counters : MonoBehaviour
         PlayerPrefs.SetInt("score", 0);
     }
 
+    // Actualiza el contador de tiempo parcial
+    // Actualiza el contador de tiempo total
+    // Actualiza el texto de tiempo
+    // Si el contador de tiempo Total llega a 0
+    // Desactiva el Topo y lanza grupo GameOver
     void Update()
     {
         timeLeftPartial -= Time.deltaTime;
